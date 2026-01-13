@@ -1,0 +1,94 @@
+body {
+  font-family: Arial, sans-serif;
+  margin: 20px;
+  background-color: #000; /* fekete háttér */
+  color: #ff9800; /* narancssárga betű */
+}
+
+h1, h2 {
+  text-align: center;
+  color: #ff9800; /* narancssárga */
+}
+
+#kasszaList {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  margin-bottom: 20px;
+}
+
+.kassza {
+  border: 2px solid #333;
+  border-radius: 8px;
+  padding: 10px;
+  margin: 5px;
+  width: 120px;
+  text-align: center;
+  cursor: pointer;
+  background-color: #111; /* sötét szürke, ne teljes fekete hogy látszódjon a keret */
+  transition: background-color 0.2s;
+  color: #ff9800; /* narancssárga szöveg */
+}
+
+.kassza.selected {
+  background-color: darkblue; /* kiválasztott kassza sötétkék */
+  color: #ff9800; /* szöveg marad narancssárga */
+}
+
+.kassza .items {
+  margin-top: 5px;
+  font-size: 0.9em;
+  color: #ffb74d; /* halványabb narancs a lista elemeknek */
+}
+
+#termekek {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+#termekek div {
+  margin: 5px 0;
+}
+
+#termekek button {
+  margin: 2px;
+  padding: 8px 12px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  background-color: #e0e0e0;
+  transition: background-color 0.2s;
+}
+
+#termekek button.selected {
+  background-color: #4caf50; /* kiválasztott termék zöld */
+  color: #fff;
+}
+
+#doneBtn, #clearBtn, #resetAllBtn {
+  margin: 10px;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-weight: bold;
+}
+
+#doneBtn {
+  background-color: #2196f3;
+  color: #fff;
+}
+
+#clearBtn {
+  background-color: #f44336;
+  color: #fff;
+}
+
+#resetAllBtn {
+  background-color: #f44336;
+  color: #fff;
+
+#summary p {
+  margin: 4px 0;
+}

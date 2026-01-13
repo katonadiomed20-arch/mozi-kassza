@@ -1,0 +1,8 @@
+{
+  "name": "Mozis Kassza",
+  "short_name": "Kassza",
+  "start_url": "index.html",
+  "display": "standalone",
+  "background_color": "#111111",
+  "theme_color": "#e50914",
+  }

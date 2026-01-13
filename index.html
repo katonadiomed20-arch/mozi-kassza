@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="hu">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Kassza</title>
+  <link rel="manifest" href="manifest.json">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <h1>Kassza Inventory</h1>
+
+  <div id="kasszaList"></div>
+
+  <div id="summary"></div>
+
+  <div id="termekek">
+    <h2>Termékek</h2>
+    <div>
+      <button onclick="toggleProduct('Popi S')">Popi S</button>
+      <button onclick="toggleProduct('Popi M')">Popi M</button>
+      <button onclick="toggleProduct('Popi L')">Popi L</button>
+      <button onclick="toggleProduct('Popi XL')">Popi XL</button>
+    </div>
+    <div>
+      <button onclick="toggleProduct('Drink S')">Drink S</button>
+      <button onclick="toggleProduct('Drink M')">Drink M</button>
+      <button onclick="toggleProduct('Drink L')">Drink L</button>
+    </div>
+    <div>
+      <button onclick="toggleProduct('Sauce')">Sauce</button>
+    </div>
+  </div>
+
+  <div>
+    <button id="doneBtn">Done</button>
+    <button id="clearBtn">Clear</button>
+    <button id="resetAllBtn">Clear All</button>
+  </div>
+
+  <script src="app.js"></script>
+  <script>
+    if ('serviceWorker' in navigator) {
+      window.addEventListener('load', () => {
+        navigator.serviceWorker.register('service-worker.js')
+          .then(reg => console.log('Service Worker registered', reg))
+          .catch(err => console.log('Service Worker failed', err));
+      });
+    }
+  </script>
+</body>
+</html>
